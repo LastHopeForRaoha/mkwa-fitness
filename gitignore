@@ -1,0 +1,40 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+
+# IDE Files
+.idea/
+.vscode/
+*.sublime-project
+*.sublime-workspace
+
+# WordPress Debug Files
+debug.log
+
+# Node/NPM/Yarn
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Compiled Assets
+*.map
+.sass-cache/
+
+# Environment Files
+.env
+.env.*
+
+# Composer
+/vendor/
+composer.lock
+
+# Build Files
+/build/
+/dist/
+
+# Temporary Files
+*.tmp
+*.temp
+*.bak
+*.swp

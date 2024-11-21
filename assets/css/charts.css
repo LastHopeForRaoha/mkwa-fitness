@@ -1,0 +1,110 @@
+/* assets/css/charts.css */
+
+.mkwa-chart-container {
+    position: relative;
+    margin: 20px 0;
+    padding: 10px;
+    background: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.mkwa-chart-container canvas {
+    min-height: 300px;
+    width: 100%;
+}
+
+.mkwa-chart-container.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.mkwa-chart-container.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    z-index: 2;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+.mkwa-chart-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10;
+}
+
+.mkwa-chart-controls button {
+    padding: 5px 10px;
+    margin-left: 5px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.mkwa-chart-controls button:hover {
+    background: #f8f9fa;
+    border-color: #c6c8ca;
+}
+
+.mkwa-chart-controls button:active {
+    background: #e9ecef;
+    border-color: #b1b3b5;
+}
+
+.mkwa-chart-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.mkwa-chart-legend {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .mkwa-chart-container canvas {
+        min-height: 250px;
+    }
+    
+    .mkwa-chart-controls {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin-bottom: 10px;
+        text-align: right;
+    }
+}
+
+@media (max-width: 480px) {
+    .mkwa-chart-container canvas {
+        min-height: 200px;
+    }
+}

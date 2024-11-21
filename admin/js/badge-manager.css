@@ -1,0 +1,34 @@
+/* admin/css/badge-manager.css */
+
+.mkwa-badge-controls {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ccd0d4;
+    box-shadow: 0 1px 1px rgba(0,0,0,.04);
+}
+
+.mkwa-badge-controls select,
+.mkwa-badge-controls input {
+    margin-right: 10px;
+    min-width: 200px;
+}
+
+.mkwa-badge-preview {
+    margin: 20px 0;
+    padding: 20px;
+    background: #f9f9f9;
+    border: 1px solid #ccd0d4;
+}
+
+#badge-preview-container svg {
+    max-width: 200px;
+    height: auto;
+}
+
+.mkwa-badge-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin: 20px 0;
+}

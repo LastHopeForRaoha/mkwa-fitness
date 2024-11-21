@@ -1,0 +1,172 @@
+/* Analytics Dashboard Layout */
+.mkwa-analytics-dashboard {
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.mkwa-dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.mkwa-dashboard-header h2 {
+    margin: 0;
+    color: #2c3338;
+    font-size: 24px;
+}
+
+.mkwa-date-range-picker {
+    padding: 8px;
+    border: 1px solid #dcdcde;
+    border-radius: 4px;
+}
+
+/* Dashboard Grid Layout */
+.mkwa-dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.mkwa-dashboard-item {
+    background: #fff;
+    border: 1px solid #dcdcde;
+    border-radius: 6px;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.mkwa-dashboard-item h3 {
+    margin: 0 0 15px 0;
+    color: #2c3338;
+    font-size: 18px;
+}
+
+/* Timeline Styling */
+.mkwa-timeline {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.mkwa-timeline-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid #f0f0f1;
+}
+
+.mkwa-timeline-item:last-child {
+    border-bottom: none;
+}
+
+.mkwa-timeline-date {
+    color: #646970;
+    font-size: 14px;
+}
+
+.mkwa-timeline-event {
+    color: #2c3338;
+    font-weight: 500;
+}
+
+/* Chart Containers */
+.mkwa-chart-container {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+/* Export Controls */
+.mkwa-chart-export-controls {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 15px 0;
+}
+
+.mkwa-chart-export {
+    background: #2271b1;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.mkwa-chart-export:hover {
+    background: #135e96;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 782px) {
+    .mkwa-dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mkwa-dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .mkwa-chart-export-controls {
+        flex-direction: column;
+    }
+
+    .mkwa-chart-export {
+        width: 100%;
+    }
+}
+
+/* Loading States */
+.mkwa-dashboard-item.loading {
+    position: relative;
+    min-height: 200px;
+}
+
+.mkwa-dashboard-item.loading::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Chart Tooltips */
+.mkwa-chart-tooltip {
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 14px;
+    pointer-events: none;
+}
+
+/* Custom Scrollbar for Timeline */
+.mkwa-timeline::-webkit-scrollbar {
+    width: 6px;
+}
+
+.mkwa-timeline::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.mkwa-timeline::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.mkwa-timeline::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
